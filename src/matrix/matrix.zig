@@ -117,7 +117,7 @@ pub fn Matrix(comptime Rows: usize, comptime Columns: usize) type {
                 const OtherType = @typeInfo(@TypeOf(other)).pointer.child;
 
                 if (SelfRows != OtherType.SelfRows or SelfColumns != OtherType.SelfColumns) {
-                    @compileError("Dimension mismatch in Add: both matrices must have the same dimensions");
+                    @compileError("Dimension mismatch in Sub: both matrices must have the same dimensions");
                 }
             }
 
@@ -158,7 +158,7 @@ pub fn Matrix(comptime Rows: usize, comptime Columns: usize) type {
                 const OtherType = @typeInfo(@TypeOf(other)).pointer.child;
 
                 if (SelfRows != OtherType.SelfRows or SelfColumns != OtherType.SelfColumns) {
-                    @compileError("Dimension mismatch in Add: both matrices must have the same dimensions");
+                    @compileError("Dimension mismatch in Div: both matrices must have the same dimensions");
                 }
             }
 
@@ -228,7 +228,7 @@ pub fn Matrix(comptime Rows: usize, comptime Columns: usize) type {
                 const OtherType = @typeInfo(@TypeOf(other)).pointer.child;
 
                 if (SelfRows != OtherType.SelfRows or SelfColumns != OtherType.SelfColumns) {
-                    @compileError("Dimension mismatch in Add: both matrices must have the same dimensions");
+                    @compileError("Dimension mismatch in ElementWise: both matrices must have the same dimensions");
                 }
             }
 
